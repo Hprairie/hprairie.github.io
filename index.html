@@ -20,22 +20,18 @@
                   <!-- <td style="padding:20px;width:100%;vertical-align:middle"> -->
                   <td style="padding:2.5%;width:63%;vertical-align:middle">
                     <p style="text-align:center">
-                      <name>Parikshit Bansal</name><br>
-                      <b>email</b>: parikshitb52@gmail.com
+                      <name>Hayden Prairie</name><br>
+                      <b>email</b>: haydenprairie@gmail.com
                     </p>
                     <p>
-                      Hi!, I am Parikshit, a second year Ph.D. student in the <a href="https://www.cs.utexas.edu">Computer Science</a> at <a href="https://www.utexas.edu">The University of Texas at Austin</a>. I am (fortunate to be) advised by <a href="https://users.ece.utexas.edu/~sanghavi/index.html">Prof. Sujay Sanghavi</a>.
+                      Hi I'm Hayden. I am currently undergraduate at UT Austin studying Electrical and Computer Engineering. I am originally from Austin, Texas. My primary interests are in machine learning, computer systems, and optimization theory.
                     </p>
                     <p>
-                    Prior to joining UT Austin, I was a budding researcher ("Research Fellow") at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research India</a>.
-                    During my time at MSR India, I was advised by <a href="http://www.amitsharma.in/">Dr. Amit Sharma</a> and we worked on various problems around using large language models (LLMs) for data annotations (and also more generally on debiasing natural language models).
+                    My research interests have spanned several niches of machine learning (e.g., subquadratic networks, pretraining/finetuning retrievers, posterior sampling is LDM), however, I am broadly interested in understanding current deep models to inform how future architectures and methods can be improved to maximize the scalability of deep networks and systems.
+                    I am also incredibly passionate about how we can create better tools and algorithms to improve the efficiency of training and serving models.
                     </p>
                     <p>
-                    Even earlier, I was an undergraduate student in Computer Science and Engineering department at <a href="https://www.cse.iitb.ac.in/">IIT Bombay</a>, learning about the fascinating field of Computer Science.
-                    I graduated with B.Tech.(Hons.) from IIT Bombay in 2021.
-                    While at IIT Bombay, I was fortunate to be advised by <a href="https://www.cse.iitb.ac.in/~sunita">Prof. Sunita Sarawagi</a> for my bachelor's thesis. 
-<!--                     My bachelor thesis was recognized for Undergraduate Reseach Award at IIT Bombay. -->
-<!--                     I also worked closely with <a href="https://www.cse.iitb.ac.in/~pjyothi">Prof. Preethi Jyothi</a> during my undergraduate studies. -->
+                    Please check out my github to see what I am currently working on and the projects I have contributed towards. On top of my research, I enjoy creating, contributing towards, fixing bugs in open source ML research and tools.
                     </p>
                     <!-- <p style="text-align:center"> -->
                     <!-- </p> -->
@@ -55,122 +51,122 @@
                         </td>
                       </tr>
             </tbody></table>
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                <tr>
-                  <td style="padding:20px;width:100%;vertical-align:middle">
-                    <heading>Research</heading>
-                    <!-- <p>I am primarily interested in creating <strong>robust and generalisable machine learning algorithms</strong> for textual data. During my undergraduate years, I have also worked on problems around efficient machine learning models and adversarial robustness.  
-                    </p> -->
-                  </td>
-                </tr>
-            </tbody></table>
-            
-              <ul>
-                  <!-- Entry #0 -->
-                  <li><p>
-                    <a href="https://arxiv.org/abs/2411.03517">
-                    <papertitle>Understanding Contrastive Learning via Gaussian Mixture Models</papertitle>
-                  </a>
-                  <br>
-
-                  <strong>Parikshit Bansal</strong>,
-                  Ali Kavis, Sujay Sanghavi
-                  <br><em>Preprint</em>
-                  <br>
-                  <a href="#" onclick="$('#contrastive_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp
-                  <a target="_blank" href="https://arxiv.org/abs/2411.03517">paper</a>
-                  <div id="contrastive_abstract" class="abstract" style="display:none;">
-                  </br>
-                  Contrastive learning attempts to learn representations from un-labeled data; it does so via a loss function that encourages the embedding of a point to be close to that of its augmentations, and far from the embeddings of random other points. This simple idea performs remarkably well, yet it is not precisely theoretically understood why this is the case. In this paper we analyze contrastive learning (specifically, the InfoNCE loss) in a natural context: dimensionality reduction in Gaussian Mixture Models. Crucially, we define an augmentation of a data point as being another independent draw from the same underlying mixture component. We show that vanilla InfoNCE is able to find the optimal lower-dimensional subspace even when the Gaussians are not isotropic -- something that vanilla spectral techniques cannot do. We further extend our analyses to multi-modal contrastive learning algorithms (e.g., CLIP). In this setting we show that contrastive learning learns the subset of fisher-optimal subspace, effectively filtering out all the noise from the learnt representations.  
-                  </p></li>
-
-                  <!-- Entry #1 -->
-                  <li><p>
-                    <a href="https://arxiv.org/abs/2305.16863">
-                    <papertitle>Large Language Models as Annotators: Enhancing Generalization of NLP Models at Minimal Cost</papertitle>
-                  </a>
-                  <br>
-
-                  <strong>Parikshit Bansal</strong>,
-                  Amit Sharma
-                  <br><em>Preprint</em>
-                  <br>
-                  <a href="#" onclick="$('#llmannotation_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp
-                  <a target="_blank" href="https://arxiv.org/abs/2306.15766">paper</a>
-                  <div id="llmannotation_abstract" class="abstract" style="display:none;">
-                  </br>
-                      State-of-the-art supervised NLP models achieve high accuracy but are also susceptible to failures on inputs from low-data regimes, such as domains that are not represented in training data. As an approximation to collecting ground-truth labels for the specific domain, we study the use of large language models (LLMs) for annotating inputs and improving the generalization of NLP models. Specifically, given a budget for LLM annotations, we present an algorithm for sampling the most informative inputs to annotate and retrain the NLP model. We find that popular active learning strategies such as uncertainty-based sampling do not work well. Instead, we propose a sampling strategy based on the difference in prediction scores between the base model and the finetuned NLP model, utilizing the fact that most NLP models are finetuned from a base model. Experiments with classification (semantic similarity) and ranking (semantic search) tasks show that our sampling strategy leads to significant gains in accuracy for both the training and target domains.                     </div>
-                  </p></li>
-
-                  <!-- Entry #2 -->
-                  <li><p>
-                    <a href="https://arxiv.org/abs/2305.16863">
-                    <papertitle>Controlling Learned Effects to Reduce Spurious Correlations in Text Classifiers</papertitle>
-                  </a>
-                  <br>
-
-                  <strong>Parikshit Bansal</strong>,
-                  Amit Sharma
-                  <br><em>ACL</em>, 2023
-                  <br>
-                  <a href="#" onclick="$('#controlling_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp
-                  <a target="_blank" href="https://arxiv.org/abs/2305.16863">paper</a>
-                  <div id="controlling_abstract" class="abstract" style="display:none;">
-                  </br>
-                        To address the problem of NLP classifiers learning spurious correlations between training features and target labels, a common approach is to make the model's predictions invariant to these features. However, this can be counter-productive when the features have a non-zero causal effect on the target label and thus are important for prediction. Therefore, using methods from the causal inference literature, we propose an algorithm to regularize the learnt effect of the features on the model's prediction to the estimated effect of feature on label. This results in an automated augmentation method that leverages the estimated effect of a feature to appropriately change the labels for new augmented inputs. On toxicity and IMDB review datasets, the proposed algorithm minimises spurious correlations and improves the minority group (i.e., samples breaking spurious correlations) accuracy, while also improving the total accuracy compared to standard training.                   
-                    </div>
-                  </p></li>
-
-                  <!-- Entry #3 -->
-
-                    <li><p>
-                      <a href="https://arxiv.org/abs/2210.10636">
-                      <papertitle>Improving Out-of-Distribution Generalization of Text-Matching Recommendation Systems</papertitle>
-                    </a>
-                    <br>
-
-                    <strong>Parikshit Bansal</strong>,
-                    Yashoteja Prabhu,
-                    Emre Kiciman,
-                    Amit Sharma
-                    <br><em>NeurIPS CML4Impact Workshop</em>, 2022
-                    <br>
-                    <a href="#" onclick="$('#improving_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp
-                    <a target="_blank" href="https://arxiv.org/abs/2210.10636">paper</a> &nbsp/&nbsp
-                    <a target="_blank" href="data/itvreg.pptx.pdf">slides</a>
-                    <div id="improving_abstract" class="abstract" style="display:none;">
-                    </br>
-                          Given a user's input text, text-matching recommender systems output relevant items by comparing the input text to available items' description, such as product-to-product recommendation on e-commerce platforms. As users' interests and item inventory are expected to change, it is important for a text-matching system to generalize to data shifts, a task known as out-of-distribution (OOD) generalization. However, we find that the popular approach of fine-tuning a large, base language model on paired item relevance data (e.g., user clicks) can be counter-productive for OOD generalization. For a product recommendation task, fine-tuning obtains worse accuracy than the base model when recommending items in a new category or for a future time period. To explain this generalization failure, we consider an intervention-based importance metric, which shows that a fine-tuned model captures spurious correlations and fails to learn the causal features that determine the relevance between any two text inputs. Moreover, standard methods for causal regularization do not apply in this setting, because unlike in images, there exist no universally spurious features in a text-matching task (the same token may be spurious or causal depending on the text it is being matched to). For OOD generalization on text inputs, therefore, we highlight a different goal: avoiding high importance scores for certain features. We do so using an intervention-based regularizer that constraints the causal effect of any token on the model's relevance score to be similar to the base model. Results on Amazon product and 3 question recommendation datasets show that our proposed regularizer improves generalization for both in-distribution and OOD evaluation, especially in difficult scenarios when the base model is not accurate.                                   
-                      </div>                  
-                  </p></li>
-
-                  <!-- Entry #4 -->
-                      <li><p>
-                        <a href="https://arxiv.org/abs/2103.01600">
-                        <papertitle>Missing Value Imputaton on Multidimensional Time Series</papertitle>
-                      </a>
-                      <br>
-                      <strong>Parikshit Bansal</strong>,
-                      Prathamesh Deshpande,
-                      Sunita Sarawagi
-                      <br><em>VLDB</em>, 2021
-                      <br>
-                      <a href="#" onclick="$('#deepmvi_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp
-                      <a target="_blank" href="https://arxiv.org/abs/2103.01600">paper</a> &nbsp/&nbsp
-                      <a target="_blank" href="data/deepmvi.pptx.pdf">slides</a>
-                      <div id="deepmvi_abstract" class="abstract" style="display:none;">
-                      </br>
-                            We present DeepMVI, a deep learning method for missing value imputation in multidimensional time-series datasets. Missing values are commonplace in decision support platforms that aggregate data over long time stretches from disparate sources, and reliable data analytics calls for careful handling of missing data. One strategy is imputing the missing values, and a wide variety of algorithms exist spanning simple interpolation, matrix factorization methods like SVD, statistical models like Kalman filters, and recent deep learning methods. We show that often these provide worse results on aggregate analytics compared to just excluding the missing data. DeepMVI uses a neural network to combine fine-grained and coarse-grained patterns along a time series, and trends from related series across categorical dimensions. After failing with off-the-shelf neural architectures, we design our own network that includes a temporal transformer with a novel convolutional window feature, and kernel regression with learned embeddings. The parameters and their training are designed carefully to generalize across different placements of missing blocks and data characteristics. Experiments across nine real datasets, four different missing scenarios, comparing seven existing methods show that DeepMVI is significantly more accurate, reducing error by more than 50% in more than half the cases, compared to the best existing method. Although slower than simpler matrix factorization methods, we justify the increased time overheads by showing that DeepMVI is the only option that provided overall more accurate analytics than dropping missing values.                       
-                        </div>                  
-                </p></li>
-              </ul>                
-            <footer>
-              <p align="right">Template: <a target="_blank" href="https://jonbarron.info/">Jon Barron</a></p>
-            </footer>
-            
-          </td>
-        </tr>
-    </table>
+    <!--         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> -->
+    <!--             <tr> -->
+    <!--               <td style="padding:20px;width:100%;vertical-align:middle"> -->
+    <!--                 <heading>Research</heading> -->
+    <!--                 <!-- <p>I am primarily interested in creating <strong>robust and generalisable machine learning algorithms</strong> for textual data. During my undergraduate years, I have also worked on problems around efficient machine learning models and adversarial robustness.   -->
+    <!--                 </p> --> -->
+    <!--               </td> -->
+    <!--             </tr> -->
+    <!--         </tbody></table> -->
+    <!--          -->
+    <!--           <ul> -->
+    <!--               <!-- Entry #0 --> -->
+    <!--               <li><p> -->
+    <!--                 <a href="https://arxiv.org/abs/2411.03517"> -->
+    <!--                 <papertitle>Understanding Contrastive Learning via Gaussian Mixture Models</papertitle> -->
+    <!--               </a> -->
+    <!--               <br> -->
+    <!---->
+    <!--               <strong>Parikshit Bansal</strong>, -->
+    <!--               Ali Kavis, Sujay Sanghavi -->
+    <!--               <br><em>Preprint</em> -->
+    <!--               <br> -->
+    <!--               <a href="#" onclick="$('#contrastive_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp -->
+    <!--               <a target="_blank" href="https://arxiv.org/abs/2411.03517">paper</a> -->
+    <!--               <div id="contrastive_abstract" class="abstract" style="display:none;"> -->
+    <!--               </br> -->
+    <!--               Contrastive learning attempts to learn representations from un-labeled data; it does so via a loss function that encourages the embedding of a point to be close to that of its augmentations, and far from the embeddings of random other points. This simple idea performs remarkably well, yet it is not precisely theoretically understood why this is the case. In this paper we analyze contrastive learning (specifically, the InfoNCE loss) in a natural context: dimensionality reduction in Gaussian Mixture Models. Crucially, we define an augmentation of a data point as being another independent draw from the same underlying mixture component. We show that vanilla InfoNCE is able to find the optimal lower-dimensional subspace even when the Gaussians are not isotropic -- something that vanilla spectral techniques cannot do. We further extend our analyses to multi-modal contrastive learning algorithms (e.g., CLIP). In this setting we show that contrastive learning learns the subset of fisher-optimal subspace, effectively filtering out all the noise from the learnt representations.   -->
+    <!--               </p></li> -->
+    <!---->
+    <!--               <!-- Entry #1 --> -->
+    <!--               <li><p> -->
+    <!--                 <a href="https://arxiv.org/abs/2305.16863"> -->
+    <!--                 <papertitle>Large Language Models as Annotators: Enhancing Generalization of NLP Models at Minimal Cost</papertitle> -->
+    <!--               </a> -->
+    <!--               <br> -->
+    <!---->
+    <!--               <strong>Parikshit Bansal</strong>, -->
+    <!--               Amit Sharma -->
+    <!--               <br><em>Preprint</em> -->
+    <!--               <br> -->
+    <!--               <a href="#" onclick="$('#llmannotation_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp -->
+    <!--               <a target="_blank" href="https://arxiv.org/abs/2306.15766">paper</a> -->
+    <!--               <div id="llmannotation_abstract" class="abstract" style="display:none;"> -->
+    <!--               </br> -->
+    <!--                   State-of-the-art supervised NLP models achieve high accuracy but are also susceptible to failures on inputs from low-data regimes, such as domains that are not represented in training data. As an approximation to collecting ground-truth labels for the specific domain, we study the use of large language models (LLMs) for annotating inputs and improving the generalization of NLP models. Specifically, given a budget for LLM annotations, we present an algorithm for sampling the most informative inputs to annotate and retrain the NLP model. We find that popular active learning strategies such as uncertainty-based sampling do not work well. Instead, we propose a sampling strategy based on the difference in prediction scores between the base model and the finetuned NLP model, utilizing the fact that most NLP models are finetuned from a base model. Experiments with classification (semantic similarity) and ranking (semantic search) tasks show that our sampling strategy leads to significant gains in accuracy for both the training and target domains.                     </div> -->
+    <!--               </p></li> -->
+    <!---->
+    <!--               <!-- Entry #2 --> -->
+    <!--               <li><p> -->
+    <!--                 <a href="https://arxiv.org/abs/2305.16863"> -->
+    <!--                 <papertitle>Controlling Learned Effects to Reduce Spurious Correlations in Text Classifiers</papertitle> -->
+    <!--               </a> -->
+    <!--               <br> -->
+    <!---->
+    <!--               <strong>Parikshit Bansal</strong>, -->
+    <!--               Amit Sharma -->
+    <!--               <br><em>ACL</em>, 2023 -->
+    <!--               <br> -->
+    <!--               <a href="#" onclick="$('#controlling_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp -->
+    <!--               <a target="_blank" href="https://arxiv.org/abs/2305.16863">paper</a> -->
+    <!--               <div id="controlling_abstract" class="abstract" style="display:none;"> -->
+    <!--               </br> -->
+    <!--                     To address the problem of NLP classifiers learning spurious correlations between training features and target labels, a common approach is to make the model's predictions invariant to these features. However, this can be counter-productive when the features have a non-zero causal effect on the target label and thus are important for prediction. Therefore, using methods from the causal inference literature, we propose an algorithm to regularize the learnt effect of the features on the model's prediction to the estimated effect of feature on label. This results in an automated augmentation method that leverages the estimated effect of a feature to appropriately change the labels for new augmented inputs. On toxicity and IMDB review datasets, the proposed algorithm minimises spurious correlations and improves the minority group (i.e., samples breaking spurious correlations) accuracy, while also improving the total accuracy compared to standard training.                    -->
+    <!--                 </div> -->
+    <!--               </p></li> -->
+    <!---->
+    <!--               <!-- Entry #3 --> -->
+    <!---->
+    <!--                 <li><p> -->
+    <!--                   <a href="https://arxiv.org/abs/2210.10636"> -->
+    <!--                   <papertitle>Improving Out-of-Distribution Generalization of Text-Matching Recommendation Systems</papertitle> -->
+    <!--                 </a> -->
+    <!--                 <br> -->
+    <!---->
+    <!--                 <strong>Parikshit Bansal</strong>, -->
+    <!--                 Yashoteja Prabhu, -->
+    <!--                 Emre Kiciman, -->
+    <!--                 Amit Sharma -->
+    <!--                 <br><em>NeurIPS CML4Impact Workshop</em>, 2022 -->
+    <!--                 <br> -->
+    <!--                 <a href="#" onclick="$('#improving_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp -->
+    <!--                 <a target="_blank" href="https://arxiv.org/abs/2210.10636">paper</a> &nbsp/&nbsp -->
+    <!--                 <a target="_blank" href="data/itvreg.pptx.pdf">slides</a> -->
+    <!--                 <div id="improving_abstract" class="abstract" style="display:none;"> -->
+    <!--                 </br> -->
+    <!--                       Given a user's input text, text-matching recommender systems output relevant items by comparing the input text to available items' description, such as product-to-product recommendation on e-commerce platforms. As users' interests and item inventory are expected to change, it is important for a text-matching system to generalize to data shifts, a task known as out-of-distribution (OOD) generalization. However, we find that the popular approach of fine-tuning a large, base language model on paired item relevance data (e.g., user clicks) can be counter-productive for OOD generalization. For a product recommendation task, fine-tuning obtains worse accuracy than the base model when recommending items in a new category or for a future time period. To explain this generalization failure, we consider an intervention-based importance metric, which shows that a fine-tuned model captures spurious correlations and fails to learn the causal features that determine the relevance between any two text inputs. Moreover, standard methods for causal regularization do not apply in this setting, because unlike in images, there exist no universally spurious features in a text-matching task (the same token may be spurious or causal depending on the text it is being matched to). For OOD generalization on text inputs, therefore, we highlight a different goal: avoiding high importance scores for certain features. We do so using an intervention-based regularizer that constraints the causal effect of any token on the model's relevance score to be similar to the base model. Results on Amazon product and 3 question recommendation datasets show that our proposed regularizer improves generalization for both in-distribution and OOD evaluation, especially in difficult scenarios when the base model is not accurate.                                    -->
+    <!--                   </div>                   -->
+    <!--               </p></li> -->
+    <!---->
+    <!--               <!-- Entry #4 --> -->
+    <!--                   <li><p> -->
+    <!--                     <a href="https://arxiv.org/abs/2103.01600"> -->
+    <!--                     <papertitle>Missing Value Imputaton on Multidimensional Time Series</papertitle> -->
+    <!--                   </a> -->
+    <!--                   <br> -->
+    <!--                   <strong>Parikshit Bansal</strong>, -->
+    <!--                   Prathamesh Deshpande, -->
+    <!--                   Sunita Sarawagi -->
+    <!--                   <br><em>VLDB</em>, 2021 -->
+    <!--                   <br> -->
+    <!--                   <a href="#" onclick="$('#deepmvi_abstract').toggle();return false;">abstract</a> &nbsp/&nbsp -->
+    <!--                   <a target="_blank" href="https://arxiv.org/abs/2103.01600">paper</a> &nbsp/&nbsp -->
+    <!--                   <a target="_blank" href="data/deepmvi.pptx.pdf">slides</a> -->
+    <!--                   <div id="deepmvi_abstract" class="abstract" style="display:none;"> -->
+    <!--                   </br> -->
+    <!--                         We present DeepMVI, a deep learning method for missing value imputation in multidimensional time-series datasets. Missing values are commonplace in decision support platforms that aggregate data over long time stretches from disparate sources, and reliable data analytics calls for careful handling of missing data. One strategy is imputing the missing values, and a wide variety of algorithms exist spanning simple interpolation, matrix factorization methods like SVD, statistical models like Kalman filters, and recent deep learning methods. We show that often these provide worse results on aggregate analytics compared to just excluding the missing data. DeepMVI uses a neural network to combine fine-grained and coarse-grained patterns along a time series, and trends from related series across categorical dimensions. After failing with off-the-shelf neural architectures, we design our own network that includes a temporal transformer with a novel convolutional window feature, and kernel regression with learned embeddings. The parameters and their training are designed carefully to generalize across different placements of missing blocks and data characteristics. Experiments across nine real datasets, four different missing scenarios, comparing seven existing methods show that DeepMVI is significantly more accurate, reducing error by more than 50% in more than half the cases, compared to the best existing method. Although slower than simpler matrix factorization methods, we justify the increased time overheads by showing that DeepMVI is the only option that provided overall more accurate analytics than dropping missing values.                        -->
+    <!--                     </div>                   -->
+    <!--             </p></li> -->
+    <!--           </ul>                 -->
+    <!--         <footer> -->
+    <!--           <p align="right">Template: <a target="_blank" href="https://jonbarron.info/">Jon Barron</a></p> -->
+    <!--         </footer> -->
+    <!--          -->
+    <!--       </td> -->
+    <!--     </tr> -->
+    <!-- </table> -->
   </body>
 
 </html>
