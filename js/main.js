@@ -35,11 +35,16 @@ function initializeSite() {
     
     // Generate social links
     const socialLinksContainer = document.getElementById('socialLinks');
-    socialLinksContainer.innerHTML = SITE_CONFIG.socialLinks.map(link => `
-        <a href="${link.url}" class="social-link" target="_blank" title="${link.description}">
-            ${link.icon} ${link.name}
-        </a>
-    `).join('');
+    socialLinksContainer.innerHTML = SITE_CONFIG.socialLinks.map(link => {
+        // Determine the final URL based on isExternal flag
+        const finalUrl = link.isExternal ? link.url : window.location.origin + link.url;
+        
+        return `
+            <a href="${finalUrl}" class="social-link" target="_blank" title="${link.description}">
+                ${link.icon} ${link.name}
+            </a>
+        `;
+    }).join('');
 }
 
 // Set up smooth scrolling navigation

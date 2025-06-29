@@ -136,6 +136,7 @@ const ContentRenderer = {
             <div class="card slide-in">
                 <div class="paper-title">${pub.title}</div>
                 <div class="paper-authors">${pub.authors}</div>
+                <div class="paper-authors">${pub.venue}</div>
                 <div class="paper-description">${pub.description}</div>
                 <div class="paper-links">${linksHtml}</div>
             </div>
@@ -192,7 +193,7 @@ const ContentRenderer = {
         return `
             <div class="card">
                 <div class="update-content" style="text-align: center; color: var(--text-muted);">
-                    No ${section} available yet. Add some ${section} files to the data/${section}/ folder!
+                    No ${section} available yet.
                 </div>
             </div>
         `;

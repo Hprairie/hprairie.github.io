@@ -2,11 +2,11 @@
 // Edit this file to customize your website content
 const SITE_CONFIG = {
     // Personal Information
-    name: "Your Name",
-    title: "PhD Student in Computer Science",
-    bio: "Hi, I'm [Your Name]! I am currently an undergraduate at [University] studying [Field]. I am originally from [Location]. My primary interests are in [research areas].",
-    research: "My research interests have spanned several niches of [field], including [specific areas]. I am broadly interested in developing an understanding of [research focus] to inform new insights into [application areas].",
-    work: "Please check out my GitHub to see what I am currently working on and the projects I have contributed towards. On top of my research, I enjoy [hobbies/interests].",
+    name: "Hayden Prairie",
+    title: "CSE PhD @ University of California, San Diego",
+    bio: "Hi, I'm Hayden! I am currently an PhD student at UCSD studying Computer Science and Engineering. I am originally from Austin, Texas and previously did by undergraduate at University of Texas at Austin. My primary interests are core machine learning and computer systems!",
+    research: "My research mostly covers the intersection of ML and systems, including SSMs, structured sparsity, and all things GPU. I am broadly interested in developing an understanding of how we can better interpret and exploit sparsity to improve into the efficiency of expressivity of large models.",
+    work: "Please check out my GitHub to see what I am currently working on and the projects I have contributed to.",
     
     // Profile Image
     profileImage: "assets/images/profile.jpg", // Update this path to your actual photo
@@ -16,26 +16,30 @@ const SITE_CONFIG = {
         {
             name: "CV",
             icon: "📄",
-            url: "#", // Replace with your CV link
-            description: "Download my CV"
+            url: "/assets/documents/cv.pdf", // Replace with your CV link
+            description: "Download my CV",
+            isExternal: false // This will be appended to hostname
         },
         {
             name: "LinkedIn",
             icon: "💼",
-            url: "#", // Replace with your LinkedIn URL
-            description: "Connect on LinkedIn"
+            url: "https://www.linkedin.com/in/haydenprairie", // Replace with your LinkedIn URL
+            description: "Connect on LinkedIn",
+            isExternal: true // This will be used as-is
         },
         {
             name: "GitHub",
             icon: "💻",
-            url: "#", // Replace with your GitHub URL
-            description: "View my code"
+            url: "https://github.com/Hprairie", // Replace with your GitHub URL
+            description: "View my code",
+            isExternal: true // This will be used as-is
         },
         {
             name: "Twitter",
             icon: "🐦",
-            url: "#", // Replace with your Twitter URL
-            description: "Follow me on Twitter"
+            url: "https://twitter.com/hayden_prairie", // Replace with your Twitter URL
+            description: "Follow me on Twitter",
+            isExternal: true // This will be used as-is
         }
     ],
     
