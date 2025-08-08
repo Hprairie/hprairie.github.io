@@ -5,18 +5,35 @@ class ContentLoader {
     }
 
     // Load JSON content from a file
-    async loadJSON(filepath) {
-        if (this.cache.has(filepath)) {
-            return this.cache.get(filepath);
+    async loadJSON(filepath, bypassCache = false) {
+        const cacheKey = filepath;
+        
+        // Check internal cache unless bypassing
+        if (!bypassCache && this.cache.has(cacheKey)) {
+            return this.cache.get(cacheKey);
         }
 
         try {
-            const response = await fetch(filepath);
+            // Add cache-busting parameter to prevent browser caching
+            const cacheBuster = new Date().getTime();
+            const urlWithCacheBuster = `${filepath}?_t=${cacheBuster}`;
+            
+            const response = await fetch(urlWithCacheBuster, {
+                cache: 'no-cache', // Disable browser caching
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
+                }
+            });
+            
             if (!response.ok) {
                 throw new Error(`Failed to load ${filepath}: ${response.status}`);
             }
             const data = await response.json();
-            this.cache.set(filepath, data);
+            
+            // Always update cache with fresh data
+            this.cache.set(cacheKey, data);
             return data;
         } catch (error) {
             console.error(`Error loading ${filepath}:`, error);
@@ -24,12 +41,17 @@ class ContentLoader {
         }
     }
 
+    // Clear the internal cache
+    clearCache() {
+        this.cache.clear();
+    }
+
     // Load all files from a directory by trying common filenames
-    async loadDirectory(basePath, fileList) {
+    async loadDirectory(basePath, fileList, bypassCache = false) {
         const contents = [];
         
         for (const filename of fileList) {
-            const content = await this.loadJSON(`${basePath}${filename}`);
+            const content = await this.loadJSON(`${basePath}${filename}`, bypassCache);
             if (content) {
                 contents.push(content);
             }
@@ -50,7 +72,7 @@ class ContentLoader {
     }
 
     // Load publications
-    async loadPublications() {
+    async loadPublications(bypassCache = true) {
         const publicationFiles = [
             'paper1.json',
             'paper2.json',
@@ -61,7 +83,8 @@ class ContentLoader {
 
         const publications = await this.loadDirectory(
             SITE_CONFIG.contentPaths.publications, 
-            publicationFiles
+            publicationFiles,
+            bypassCache
         );
 
         return publications.sort((a, b) => {
@@ -72,7 +95,7 @@ class ContentLoader {
     }
 
     // Load blog posts
-    async loadBlogPosts() {
+    async loadBlogPosts(bypassCache = true) {
         const blogFiles = [
             'post1.json',
             'post2.json',
@@ -83,7 +106,8 @@ class ContentLoader {
 
         const posts = await this.loadDirectory(
             SITE_CONFIG.contentPaths.blog, 
-            blogFiles
+            blogFiles,
+            bypassCache
         );
 
         return posts
@@ -96,7 +120,7 @@ class ContentLoader {
     }
 
     // Load updates
-    async loadUpdates() {
+    async loadUpdates(bypassCache = true) {
         const updateFiles = [
             'update1.json',
             'update2.json',
@@ -112,7 +136,8 @@ class ContentLoader {
 
         const updates = await this.loadDirectory(
             SITE_CONFIG.contentPaths.updates, 
-            updateFiles
+            updateFiles,
+            bypassCache
         );
 
         return updates

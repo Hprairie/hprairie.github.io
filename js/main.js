@@ -61,15 +61,24 @@ function setupNavigation() {
             // Add active class to clicked link
             this.classList.add('active');
             
-            // Smooth scroll to section
+            // Smooth scroll to section with offset for sticky navigation
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // For the about section, scroll to the very top
+                if (targetId === 'about') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // For other sections, use scrollIntoView which respects scroll-margin-top
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
@@ -83,16 +92,26 @@ function updateActiveNavLink() {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
     
+    // Get the sticky nav height for proper offset calculation
+    const nav = document.querySelector('.nav');
+    const navHeight = nav ? nav.offsetHeight : 0;
+    
     let current = '';
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
+    // Special case: if we're near the top, always select "about"
+    if (window.pageYOffset <= 50) {
+        current = 'about';
+    } else {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            // Check if section is in view, accounting for the larger scroll margin
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+    }
     
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -104,6 +123,9 @@ function updateActiveNavLink() {
 
 // Load all content sections
 async function loadAllContent() {
+    // Clear cache on page load to get fresh data
+    contentLoader.clearCache();
+    
     // Load content in parallel for better performance
     const [publications, blogPosts, updates] = await Promise.allSettled([
         loadPublications(),
