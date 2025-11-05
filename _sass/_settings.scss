@@ -6,17 +6,27 @@ $sans-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubunt
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 
-// Colors matching website-old dark theme
-$text-color: #ffffff;
-$text-secondary: #b8b8b8;
-$text-muted: #888888;
-$bg-color: #1a1a1a;
-$bg-secondary: #2d2d2d;
-$bg-card: #383838;
-$contrast-color: #c2c7cd;
-$accent-hover: #3d8dff;
-$border-color: #4a4a4a;
-$shadow-color: rgba(0, 0, 0, 0.3);
+// Colors matching Kanagawa Wave theme
+// Default foreground and background
+$text-color: #DCD7BA; // fujiWhite - Default foreground
+$text-secondary: #C8C093; // oldWhite - Dark foreground
+$text-muted: #727169; // fujiGray - Comments/muted text
+
+// Background colors
+$bg-color: #1F1F28; // sumiInk1 - Default background
+$bg-secondary: #2A2A37; // sumiInk2 - Lighter background
+$bg-card: #363646; // sumiInk3 - Lighter background (cards)
+
+// Accent and highlight colors
+$contrast-color: #7E9CD8; // crystalBlue - Functions and Titles
+$accent-hover: #2D4F67; // waveBlue2 - Popup selection background, search background
+$accent-light: #938AA9; // springViolet1 - Light foreground
+
+// Borders and dividers
+$border-color: #54546D; // sumiInk4 - Darker foreground (borders)
+
+// Shadow
+$shadow-color: rgba(0, 0, 0, 0.5);
 
 // Text sizes matching website-old
 $font-size-base: 1rem;

@@ -43,7 +43,7 @@
     font-weight: 700;
     margin-bottom: 10px;
     width: 100% !important; // Override Tufte CSS narrow width
-    background: linear-gradient(135deg, $text-color, $contrast-color);
+    background: linear-gradient(135deg, $text-color, #7E9CD8); // crystalBlue
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -51,7 +51,7 @@
 
 .profile-info .title {
     font-size: 1.1rem; // Reduced from $font-size-large (1.2rem)
-    color: $contrast-color;
+    color: #938AA9; // springViolet1 - Light foreground
     margin-bottom: 20px;
     font-weight: 500;
     width: 100% !important; // Override Tufte CSS narrow width
@@ -103,7 +103,7 @@
     font-size: $font-size-h2;
     margin-bottom: 30px;
     color: $text-color;
-    border-bottom: 2px solid $contrast-color;
+    border-bottom: 2px solid #223249; // waveBlue1 - Popup background
     padding-bottom: 10px;
 }
 
@@ -119,7 +119,7 @@
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px $shadow-color;
-    border-color: $contrast-color;
+    border-color: #223249; // waveBlue1 - Popup background
 }
 
 .paper-title {
@@ -150,7 +150,7 @@
 .paper-link {
     padding: 6px 12px;
     background: $bg-secondary;
-    color: $contrast-color;
+    color: #7E9CD8; // crystalBlue - Functions and Titles
     text-decoration: none;
     border-radius: 6px;
     font-size: $font-size-small;
@@ -160,7 +160,7 @@
 }
 
 .paper-link:hover {
-    background: $contrast-color;
+    background: #2D4F67; // waveBlue2 - Popup selection background
     color: $text-color;
 }
 
@@ -171,7 +171,7 @@
 }
 
 .update-date {
-    color: $contrast-color;
+    color: #957FB8; // oniViolet - Statements and Keywords
     font-weight: 600;
     font-size: $font-size-small;
     min-width: 100px;
@@ -203,7 +203,7 @@
 }
 
 .blog-title-link:hover {
-    color: $contrast-color;
+    color: #7E9CD8; // crystalBlue - Functions and Titles
 }
 
 .loading {
