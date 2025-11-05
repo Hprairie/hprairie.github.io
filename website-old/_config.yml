@@ -1,0 +1,26 @@
+# GitHub Pages configuration
+plugins:
+  - jekyll-relative-links
+
+# Enable relative links processing
+relative_links:
+  enabled: true
+  collections: true
+
+# Include all files (don't ignore files starting with _)
+include:
+  - blog
+  - data
+  - css
+  - js
+  - assets
+
+# Don't process certain files with Jekyll
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - build-blog.js
+  - new-post.js
+  - BLOG_TUTORIAL.md

@@ -1,0 +1,20 @@
+{
+  "name": "hayden-prairie-website",
+  "version": "1.0.0",
+  "description": "Personal website for Hayden Prairie",
+  "scripts": {
+    "build-blog": "node build-blog.js",
+    "build-blog-dev": "node build-blog.js && echo 'Blog built successfully!'",
+    "new-post": "node new-post.js",
+    "serve": "python3 -m http.server 8000",
+    "dev": "npm run build-blog && npm run serve"
+  },
+  "keywords": [
+    "blog",
+    "personal-website",
+    "academic",
+    "machine-learning"
+  ],
+  "author": "Hayden Prairie",
+  "license": "MIT"
+}
