@@ -1,0 +1,293 @@
+// Main page styles matching website-old
+// These styles are for the homepage with profile, updates, publications, and blog sections
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid $border-color;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    max-width: 100%; // Match the width of cards below
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+    width: 100%; // Ensure full width is available
+}
+
+.profile-info h1 {
+    font-size: 2rem; // Reduced from $font-size-h1 (2.5rem)
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 100% !important; // Override Tufte CSS narrow width
+    background: linear-gradient(135deg, $text-color, $contrast-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.profile-info .title {
+    font-size: 1.1rem; // Reduced from $font-size-large (1.2rem)
+    color: $contrast-color;
+    margin-bottom: 20px;
+    font-weight: 500;
+    width: 100% !important; // Override Tufte CSS narrow width
+}
+
+.profile-info p {
+    color: $text-secondary;
+    margin-bottom: 15px;
+    width: 100% !important; // Override Tufte CSS narrow width
+    padding-right: 0 !important; // Remove Tufte CSS padding
+    font-size: 0.95rem; // Slightly smaller than base font size
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: $bg-card;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    background: $accent-hover;
+    border-color: $accent-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px $shadow-color;
+}
+
+.section {
+    margin-bottom: 60px;
+    scroll-margin-top: 75px;
+}
+
+.section h2 {
+    font-size: $font-size-h2;
+    margin-bottom: 30px;
+    color: $text-color;
+    border-bottom: 2px solid $contrast-color;
+    padding-bottom: 10px;
+}
+
+.card {
+    background: $bg-card;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid $border-color;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px $shadow-color;
+    border-color: $contrast-color;
+}
+
+.paper-title {
+    font-size: $font-size-large;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.paper-authors {
+    color: $text-secondary;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.paper-description {
+    color: $text-secondary;
+    margin-bottom: 15px;
+}
+
+.paper-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.paper-link {
+    padding: 6px 12px;
+    background: $bg-secondary;
+    color: $contrast-color;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: $font-size-small;
+    font-weight: 500;
+    border: 1px solid $border-color;
+    transition: all 0.3s ease;
+}
+
+.paper-link:hover {
+    background: $contrast-color;
+    color: $text-color;
+}
+
+.update-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.update-date {
+    color: $contrast-color;
+    font-weight: 600;
+    font-size: $font-size-small;
+    min-width: 100px;
+}
+
+.update-content {
+    color: $text-secondary;
+}
+
+.blog-date {
+    color: $text-muted;
+    font-size: $font-size-small;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    color: $text-secondary;
+    margin-bottom: 15px;
+}
+
+.blog-title-link {
+    color: $text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    font-size: $font-size-large;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.blog-title-link:hover {
+    color: $contrast-color;
+}
+
+.loading {
+    text-align: center;
+    color: $text-muted;
+    padding: 40px;
+    font-style: italic;
+}
+
+.error {
+    background: #4a1a1a;
+    border: 1px solid #8a4444;
+    color: #ff6b6b;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.empty-state {
+    text-align: center;
+    color: $text-muted;
+}
+
+// Animations
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-link {
+        padding: 10px 15px;
+        font-size: $font-size-small;
+    }
+
+    .update-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .update-date {
+        min-width: auto;
+    }
+}
+

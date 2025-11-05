@@ -1,0 +1,32 @@
+/* This file contains all the constants for colors and font styles */
+
+// Fonts matching website-old styling
+$body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+$sans-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+// Colors matching website-old dark theme
+$text-color: #ffffff;
+$text-secondary: #b8b8b8;
+$text-muted: #888888;
+$bg-color: #1a1a1a;
+$bg-secondary: #2d2d2d;
+$bg-card: #383838;
+$contrast-color: #c2c7cd;
+$accent-hover: #3d8dff;
+$border-color: #4a4a4a;
+$shadow-color: rgba(0, 0, 0, 0.3);
+
+// Text sizes matching website-old
+$font-size-base: 1rem;
+$font-size-small: 0.9rem;
+$font-size-large: 1.2rem;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$line-height-base: 1.6;
+
+$link-style: underline; // choices are 'color' or 'underline'. Color option styles links with $contrast-color set above
+
+
+

@@ -1,0 +1,20 @@
+- name: "CV"
+  icon: "📄"
+  url: "/assets/documents/cv.pdf"
+  description: "Download my CV"
+  isExternal: false
+- name: "LinkedIn"
+  icon: "💼"
+  url: "https://www.linkedin.com/in/haydenprairie"
+  description: "Connect on LinkedIn"
+  isExternal: true
+- name: "GitHub"
+  icon: "💻"
+  url: "https://github.com/Hprairie"
+  description: "View my code"
+  isExternal: true
+- name: "Twitter"
+  icon: "🐦"
+  url: "https://twitter.com/hayden_prairie"
+  description: "Follow me on Twitter"
+  isExternal: true
