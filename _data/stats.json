@@ -1,9 +1,14 @@
 {
   "huggingface": {
-    "models": 0,
+    "models": 8,
     "datasets": 0,
     "likes": 0
   },
-  "last_updated": null
+  "github": {
+    "commits": 521
+  },
+  "wandb": {
+    "experiments": 0
+  },
+  "last_updated": "2025-11-25T22:46:33.264127"
 }
-
