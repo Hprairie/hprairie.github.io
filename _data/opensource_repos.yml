@@ -1,0 +1,14 @@
+# List of GitHub repositories to display
+# Format: username/repository-name
+repositories:
+  - "Hprairie/Bi-Mamba2"
+  - "sanyalsunny111/FLOW_finetuning"
+  - "Hprairie/tlib"
+  - "Hprairie/finetune-clip"
+  - "Hprairie/cs336"
+  - "Hprairie/einfunc"
+
+# List of Hugging Face models/datasets to display
+# Format: username/model-name
+huggingface_models:
+  # - "username/model-name" # Add your models here

@@ -1,0 +1,56 @@
+- name: "Bi-Mamba2"
+  description: "A Triton Kernel for incorporating Bi-Directionality in Mamba2"
+  language: "Python"
+  languageColor: "#3572A5"
+  url: "https://github.com/yourusername/Bi-Mamba2"
+  stars: 75
+  forks: 0
+  isPublic: true
+
+- name: "FLOW_finetuning"
+  description: "Upweighting Easy Samples in Fine-Tuning Mitigates Forgetting"
+  language: "Python"
+  languageColor: "#3572A5"
+  url: "https://github.com/sanyalsunny111/FLOW_finetuning"
+  stars: 4
+  forks: 3
+  isPublic: true
+
+- name: "tlib"
+  description: "An einops style library written to streamline programming in Triton"
+  language: "Python"
+  languageColor: "#3572A5"
+  url: "https://github.com/yourusername/tlib"
+  stars: 1
+  forks: 0
+  isPublic: true
+
+- name: "finetune-clip"
+  description: "A library for finetuning CLIP models on fine-grained contrastive losses"
+  language: "Jupyter Notebook"
+  languageColor: "#DA5B0B"
+  url: "https://github.com/yourusername/finetune-clip"
+  stars: 3
+  forks: 0
+  isPublic: true
+
+- name: "cs336"
+  description: "Personal Implementation of Assignments for Stanford's CS336"
+  language: "Python"
+  languageColor: "#3572A5"
+  url: "https://github.com/yourusername/cs336"
+  stars: 6
+  forks: 0
+  isPublic: true
+
+- name: "einfunc"
+  description: "Readable and unrestricted tensor operations using einstein notation"
+  language: "Python"
+  languageColor: "#3572A5"
+  url: "https://github.com/yourusername/einfunc"
+  stars: 3
+  forks: 0
+  isPublic: true
+
+
+

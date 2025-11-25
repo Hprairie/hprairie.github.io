@@ -1,7 +1,7 @@
 name: "Hayden Prairie"
 title: "CSE PhD @ University of California, San Diego"
-bio: "Hi, I'm Hayden! I am currently an PhD student at UCSD studying Computer Science and Engineering. I am originally from Austin, Texas and previously did by undergraduate at University of Texas at Austin. My primary interests are core machine learning and computer systems!"
-research: "My research mostly covers the intersection of ML and systems, including SSMs, structured sparsity, and all things GPU. I am broadly interested in developing an understanding of how we can better interpret and exploit sparsity to improve into the efficiency of expressivity of large models."
+bio: "Hi, I'm Hayden! I am currently an PhD student at UCSD studying Computer Science and Engineering. I am part of [Sandy Research Lab](https://sandyresearch.github.io/) and advised by Dan Fu and Taylor Berg-Kirkpatrick. I am originally from Austin, Texas and previously did by undergraduate at University of Texas at Austin. My primary interests are core machine learning and computer systems!"
+research: "My research mostly covers the intersection of ML and systems, including SSMs, structured sparsity, and all things GPU. I am broadly interested in developing an understanding of how we can better interpret and exploit sparsity to improve the efficiency and expressivity of large models."
 work: "Please check out my GitHub to see what I am currently working on and the projects I have contributed to!"
 profile_image: "assets/images/profile.jpg"
 

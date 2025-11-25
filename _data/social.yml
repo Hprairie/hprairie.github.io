@@ -1,20 +1,30 @@
 - name: "CV"
   icon: "📄"
+  iconClass: "file"
   url: "/assets/documents/cv.pdf"
   description: "Download my CV"
   isExternal: false
 - name: "LinkedIn"
   icon: "💼"
+  iconClass: "linkedin"
   url: "https://www.linkedin.com/in/haydenprairie"
   description: "Connect on LinkedIn"
   isExternal: true
 - name: "GitHub"
   icon: "💻"
+  iconClass: "github"
   url: "https://github.com/Hprairie"
   description: "View my code"
   isExternal: true
 - name: "Twitter"
   icon: "🐦"
+  iconClass: "twitter"
   url: "https://twitter.com/hayden_prairie"
   description: "Follow me on Twitter"
+  isExternal: true
+- name: "Google Scholar"
+  icon: "📚"
+  iconClass: "google-scholar"
+  url: "https://scholar.google.com/citations?user=A1c25kAAAAAJ&hl=en"
+  description: "View my publications"
   isExternal: true

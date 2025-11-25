@@ -1,0 +1,13 @@
+# Contribution sources configuration
+github:
+  username: "Hprairie"
+  enabled: true
+
+# Placeholders for future integration
+huggingface:
+  username: "Hprairie"
+  enabled: true
+
+wandb:
+  username: "haydenprairie"
+  enabled: true

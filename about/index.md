@@ -15,9 +15,9 @@ nav_exclude: true
             <div class="profile-info">
                 <h1>{{ site.data.profile.name }}</h1>
                 <div class="title">{{ site.data.profile.title }}</div>
-                <p>{{ site.data.profile.bio }}</p>
-                <p>{{ site.data.profile.research }}</p>
-                <p>{{ site.data.profile.work }}</p>
+                <p>{{ site.data.profile.bio | markdownify }}</p>
+                <p>{{ site.data.profile.research | markdownify }}</p>
+                <p>{{ site.data.profile.work | markdownify }}</p>
             </div>
         </div>
 
@@ -27,7 +27,7 @@ nav_exclude: true
                class="social-link" 
                {% if link.isExternal %}target="_blank"{% endif %}
                title="{{ link.description }}">
-                {{ link.icon }} {{ link.name }}
+                <span class="svg-icon {{ link.iconClass }}"></span> {{ link.name }}
             </a>
             {% endfor %}
         </div>
@@ -85,6 +85,46 @@ nav_exclude: true
                     </div>
                 </div>
             {% endif %}
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="opensource" class="section fade-in">
+        <h2>Open Source</h2>
+        <script type="application/json" id="repos-data">
+        [
+            {% for repo in site.data.opensource_repos.repositories %}
+            "{{ repo }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ]
+        </script>
+        <div id="opensourceContainer" class="opensource-grid">
+            <div class="card">
+                <div class="update-content empty-state">
+                    Loading open source projects...
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contribution Heatmap -->
+        <div class="contribution-heatmap-section">
+            <script type="application/json" id="contributions-config">
+            {
+                "github": {
+                    "username": "{{ site.data.contributions.github.username }}",
+                    "enabled": {{ site.data.contributions.github.enabled }}
+                },
+                "huggingface": {
+                    "username": "{{ site.data.contributions.huggingface.username }}",
+                    "enabled": {{ site.data.contributions.huggingface.enabled }}
+                },
+                "wandb": {
+                    "username": "{{ site.data.contributions.wandb.username }}",
+                    "enabled": {{ site.data.contributions.wandb.enabled }}
+                }
+            }
+            </script>
+            <div id="contributionsHeatmap"></div>
         </div>
     </section>
 

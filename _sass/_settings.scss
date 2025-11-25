@@ -7,23 +7,41 @@ $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 
 // Colors matching Kanagawa Wave theme
+// Palette colors from Kanagawa theme
+
 // Default foreground and background
 $text-color: #DCD7BA; // fujiWhite - Default foreground
 $text-secondary: #C8C093; // oldWhite - Dark foreground
 $text-muted: #727169; // fujiGray - Comments/muted text
 
 // Background colors
-$bg-color: #1F1F28; // sumiInk1 - Default background
-$bg-secondary: #2A2A37; // sumiInk2 - Lighter background
-$bg-card: #363646; // sumiInk3 - Lighter background (cards)
+$bg-color: #1F1F28; // sumiInk3 - Default background
+$bg-secondary: #2A2A37; // sumiInk4 - Lighter background
+$bg-card: #363646; // sumiInk5 - Lighter background (cards)
 
 // Accent and highlight colors
 $contrast-color: #7E9CD8; // crystalBlue - Functions and Titles
 $accent-hover: #2D4F67; // waveBlue2 - Popup selection background, search background
 $accent-light: #938AA9; // springViolet1 - Light foreground
 
+// Purple/Violet colors
+$oni-violet: #957FB8; // oniViolet
+$oni-violet2: #b8b4d0; // oniViolet2
+$spring-violet1: #938AA9; // springViolet1
+$spring-violet2: #9CABCA; // springViolet2
+
+// Blue colors
+$crystal-blue: #7E9CD8; // crystalBlue
+$wave-blue1: #223249; // waveBlue1
+$wave-blue2: #2D4F67; // waveBlue2
+
+// Error/Red colors
+$winter-red: #43242B; // winterRed - Dark red background
+$autumn-red: #C34043; // autumnRed - Red text/borders
+$samurai-red: #E82424; // samuraiRed - Bright red
+
 // Borders and dividers
-$border-color: #54546D; // sumiInk4 - Darker foreground (borders)
+$border-color: #54546D; // sumiInk6 - Darker foreground (borders)
 
 // Shadow
 $shadow-color: rgba(0, 0, 0, 0.5);

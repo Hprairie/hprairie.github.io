@@ -43,7 +43,7 @@
     font-weight: 700;
     margin-bottom: 10px;
     width: 100% !important; // Override Tufte CSS narrow width
-    background: linear-gradient(135deg, $text-color, #7E9CD8); // crystalBlue
+    background: linear-gradient(135deg, $oni-violet, $spring-violet2); // oniViolet to springViolet2 gradient
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -51,7 +51,7 @@
 
 .profile-info .title {
     font-size: 1.1rem; // Reduced from $font-size-large (1.2rem)
-    color: #938AA9; // springViolet1 - Light foreground
+    color: $spring-violet1; // springViolet1 - Light foreground
     margin-bottom: 20px;
     font-weight: 500;
     width: 100% !important; // Override Tufte CSS narrow width
@@ -94,24 +94,55 @@
     box-shadow: 0 4px 12px $shadow-color;
 }
 
+// SVG Icons for social links - using consistent color scheme
+.svg-icon {
+    width: 40px;
+    height: 40px;
+    transform: scale(0.75);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.linkedin {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23957FB8' d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E");
+    }
+
+    &.github {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23957FB8' d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
+    }
+
+    &.twitter {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23957FB8' d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z'/%3E%3C/svg%3E");
+    }
+
+    &.google-scholar {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23957FB8' d='M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z'/%3E%3C/svg%3E");
+    }
+
+    &.file {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23957FB8' d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z'/%3E%3C/svg%3E");
+    }
+}
+
 .section {
-    margin-bottom: 60px;
+    margin-bottom: 8px;
     scroll-margin-top: 75px;
 }
 
 .section h2 {
     font-size: $font-size-h2;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     color: $text-color;
-    border-bottom: 2px solid #223249; // waveBlue1 - Popup background
-    padding-bottom: 10px;
+    border-bottom: 2px solid $wave-blue1; // waveBlue1 - Popup background
+    padding-bottom: 8px;
 }
 
 .card {
     background: $bg-card;
     border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 8px;
     border: 1px solid $border-color;
     transition: all 0.3s ease;
 }
@@ -119,38 +150,40 @@
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px $shadow-color;
-    border-color: #223249; // waveBlue1 - Popup background
+    border-color: $wave-blue1; // waveBlue1 - Popup background
 }
 
 .paper-title {
     font-size: $font-size-large;
     font-weight: 600;
-    color: $text-color;
-    margin-bottom: 10px;
+    color: $oni-violet; // oniViolet - matching updates section and icons
+    margin-bottom: 8px;
     line-height: 1.4;
 }
 
 .paper-authors {
-    color: $text-secondary;
-    margin-bottom: 10px;
+    color: $spring-violet2; // springViolet2 - complements light purple titles
+    margin-bottom: 8px;
     font-style: italic;
 }
 
 .paper-description {
     color: $text-secondary;
-    margin-bottom: 15px;
+    margin-bottom: 0px; // Remove bottom margin to eliminate extra space
 }
 
 .paper-links {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: 8px; // Add small spacing above links if they exist
+    margin-bottom: 0px; // Remove bottom margin
 }
 
 .paper-link {
     padding: 6px 12px;
     background: $bg-secondary;
-    color: #7E9CD8; // crystalBlue - Functions and Titles
+    color: $crystal-blue; // crystalBlue - Functions and Titles
     text-decoration: none;
     border-radius: 6px;
     font-size: $font-size-small;
@@ -160,7 +193,7 @@
 }
 
 .paper-link:hover {
-    background: #2D4F67; // waveBlue2 - Popup selection background
+    background: $wave-blue2; // waveBlue2 - Popup selection background
     color: $text-color;
 }
 
@@ -171,7 +204,7 @@
 }
 
 .update-date {
-    color: #957FB8; // oniViolet - Statements and Keywords
+    color: $oni-violet; // oniViolet - Statements and Keywords
     font-weight: 600;
     font-size: $font-size-small;
     min-width: 100px;
@@ -179,17 +212,18 @@
 
 .update-content {
     color: $text-secondary;
+    margin-bottom: 0px; // Remove bottom margin to eliminate extra space
 }
 
 .blog-date {
     color: $text-muted;
     font-size: $font-size-small;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .blog-excerpt {
     color: $text-secondary;
-    margin-bottom: 15px;
+    margin-bottom: 0px; // Remove bottom margin to eliminate extra space
 }
 
 .blog-title-link {
@@ -203,7 +237,7 @@
 }
 
 .blog-title-link:hover {
-    color: #7E9CD8; // crystalBlue - Functions and Titles
+    color: $crystal-blue; // crystalBlue - Functions and Titles
 }
 
 .loading {
@@ -214,9 +248,9 @@
 }
 
 .error {
-    background: #4a1a1a;
-    border: 1px solid #8a4444;
-    color: #ff6b6b;
+    background: $winter-red; // winterRed - Dark red background
+    border: 1px solid $autumn-red; // autumnRed - Red border
+    color: $samurai-red; // samuraiRed - Bright red text
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -225,6 +259,132 @@
 .empty-state {
     text-align: center;
     color: $text-muted;
+}
+
+// Open Source Section - GitHub-style cards
+.opensource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.opensource-card {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
+}
+
+.opensource-card:hover {
+    border-color: $oni-violet; // oniViolet on hover
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px $shadow-color;
+}
+
+.opensource-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.opensource-card-title-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.opensource-icon {
+    width: 16px;
+    height: 16px;
+    color: $oni-violet; // oniViolet
+    flex-shrink: 0;
+}
+
+.opensource-card-name {
+    color: $crystal-blue; // crystalBlue
+    text-decoration: none;
+    font-weight: 600;
+    font-size: $font-size-base;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.3s ease;
+}
+
+.opensource-card-name:hover {
+    color: $oni-violet; // oniViolet on hover
+    text-decoration: underline;
+}
+
+.opensource-public-badge {
+    font-size: 0.75rem;
+    color: $text-secondary;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 2px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.opensource-card-description {
+    color: $text-secondary;
+    font-size: $font-size-small;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.opensource-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 8px;
+    border-top: 1px solid $border-color;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.opensource-language {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: $font-size-small;
+    color: $text-secondary;
+}
+
+.opensource-language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.opensource-stats {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: $font-size-small;
+    color: $text-secondary;
+}
+
+.opensource-star-icon,
+.opensource-fork-icon {
+    width: 16px;
+    height: 16px;
+    color: $text-secondary;
 }
 
 // Animations
@@ -258,6 +418,12 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .opensource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
@@ -288,6 +454,232 @@
 
     .update-date {
         min-width: auto;
+    }
+
+    .opensource-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+// Contribution Heatmap Styles
+.contribution-heatmap-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.heatmap-container {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+}
+
+.heatmap-header {
+    margin-bottom: 16px;
+}
+
+.heatmap-title {
+    color: $text-color;
+    font-size: $font-size-base;
+    font-weight: 600;
+}
+
+.heatmap-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px;
+    width: 100%;
+    // overflow-x: auto; // Removed to prevent unnecessary scrollbar
+}
+
+.heatmap-day-labels {
+    display: flex;
+    flex-direction: column;
+    padding-right: 4px;
+}
+
+.heatmap-day-labels-spacer {
+    height: 16px;
+    margin-bottom: 4px;
+    flex-shrink: 0; // Prevent shrinking
+}
+
+.heatmap-day-labels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    justify-content: space-between; // Ensure full height distribution
+}
+
+.heatmap-day-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 10px;
+    color: $text-muted;
+    line-height: 1;
+}
+
+.heatmap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    width: 100%;
+}
+
+.heatmap-month-row {
+    display: flex;
+    gap: 2px;
+    height: 16px;
+    align-items: flex-end;
+    flex-shrink: 0; // Prevent shrinking
+}
+
+.heatmap-month-label {
+    flex: 1;
+    min-width: 0;
+    font-size: 10px;
+    color: $text-muted;
+    text-align: left;
+    line-height: 1;
+    overflow: hidden;
+}
+
+.heatmap-week-columns {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    flex: 1; // Take remaining height
+}
+
+.heatmap-week {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.heatmap-square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1; // Ensure squares fill the vertical space exactly like labels
+    
+    &.empty {
+        background: transparent;
+        cursor: default;
+    }
+    
+    &.level-0 {
+        background-color: #16161D; // sumiInk1 - no contributions
+        border: 1px solid $border-color;
+    }
+    
+    &.level-1 {
+        background-color: #0D4F3C; // dragonGreen - 1 contribution
+    }
+    
+    &.level-2 {
+        background-color: #2D4F67; // waveBlue2 - 2-3 contributions
+    }
+    
+    &.level-3 {
+        background-color: #7E9CD8; // crystalBlue - 4-5 contributions
+    }
+    
+    &.level-4 {
+        background-color: #957FB8; // oniViolet - 6+ contributions
+    }
+    
+    &:hover:not(.empty) {
+        border: 1px solid $text-color;
+        transform: scale(1.2);
+    }
+}
+
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 10px;
+    color: $text-muted;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $border-color;
+}
+
+.contributions-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 4px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-color;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: $text-secondary;
+}
+
+.stat-source {
+    font-size: 0.75rem;
+    color: $text-muted;
+    font-style: italic;
+}
+
+.heatmap-legend-squares {
+    display: flex;
+    gap: 2px;
+}
+
+@media (max-width: 768px) {
+    .heatmap-wrapper {
+        overflow-x: auto; // Only allow scroll on mobile
+    }
+    
+    .heatmap-container {
+        padding: 16px;
+    }
+
+    
+    .heatmap-wrapper {
+        gap: 2px;
+    }
+    
+    .heatmap-square {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .heatmap-week {
+        width: 10px;
+    }
+    
+    .heatmap-month-label {
+        width: 10px;
     }
 }
 
