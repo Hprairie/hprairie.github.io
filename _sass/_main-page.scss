@@ -167,6 +167,75 @@
     font-style: italic;
 }
 
+.paper-venue-block {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
+    row-gap: 12px;
+    align-items: start;
+    margin-bottom: 8px;
+}
+
+.paper-venue-block .paper-venue {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+}
+
+/* Flatten <details> into the grid so venue + summary share row 1; abstract spans full width on row 2 */
+.paper-abstract {
+    display: contents;
+}
+
+.paper-abstract > summary {
+    list-style: none;
+}
+
+.paper-abstract > summary::-webkit-details-marker {
+    display: none;
+}
+
+.paper-abstract-summary {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: $font-size-small;
+    font-weight: 500;
+    color: $crystal-blue;
+    user-select: none;
+}
+
+.paper-abstract-summary:hover {
+    color: $wave-blue1;
+}
+
+.paper-abstract-summary::after {
+    content: "";
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.paper-abstract[open] .paper-abstract-summary::after {
+    transform: rotate(-135deg);
+    margin-top: 4px;
+}
+
+.paper-abstract .paper-description {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 0;
+    padding-top: 12px;
+    border-top: 1px solid $border-color;
+}
+
 .paper-description {
     color: $text-secondary;
     margin-bottom: 0px; // Remove bottom margin to eliminate extra space

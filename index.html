@@ -60,14 +60,20 @@ title: Home
     <section id="publications" class="section fade-in">
         <h2>Publications</h2>
         <div id="publicationsContainer">
-            {% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
-            {% if sorted_pubs.size > 0 %}
-                {% for pub in sorted_pubs %}
+            {% if site.data.publications.size > 0 %}
+                {% for pub in site.data.publications %}
                 <div class="card slide-in">
                     <div class="paper-title">{{ pub.title }}</div>
                     <div class="paper-authors">{{ pub.authors }}</div>
-                    <div class="paper-authors">{{ pub.venue }}</div>
-                    <div class="paper-description">{{ pub.description }}</div>
+                    <div class="paper-venue-block">
+                        <div class="paper-authors paper-venue">{{ pub.venue }}</div>
+                        {% if pub.description %}
+                        <details class="paper-abstract">
+                            <summary class="paper-abstract-summary">Abstract</summary>
+                            <div class="paper-description">{{ pub.description }}</div>
+                        </details>
+                        {% endif %}
+                    </div>
                     {% if pub.links %}
                     <div class="paper-links">
                         {% for link in pub.links %}
