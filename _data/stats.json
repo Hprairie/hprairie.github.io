@@ -1,7 +1,7 @@
 {
   "huggingface": {
-    "models": 0,
-    "datasets": 0,
+    "models": 8,
+    "datasets": 16,
     "likes": 0
   },
   "github": {
@@ -10,5 +10,5 @@
   "wandb": {
     "experiments": 0
   },
-  "last_updated": "2026-06-05T17:55:45.096212"
+  "last_updated": "2026-06-05T19:57:47.830962"
 }
