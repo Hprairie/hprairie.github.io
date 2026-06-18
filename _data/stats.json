@@ -1,14 +1,14 @@
 {
   "huggingface": {
-    "models": 8,
-    "datasets": 16,
+    "models": 0,
+    "datasets": 0,
     "likes": 0
   },
   "github": {
-    "commits": 272
+    "commits": 274
   },
   "wandb": {
     "experiments": 0
   },
-  "last_updated": "2026-06-17T23:24:51.022311"
+  "last_updated": "2026-06-18T04:04:24.618002"
 }
